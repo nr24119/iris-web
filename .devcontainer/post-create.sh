@@ -6,6 +6,9 @@
 # mark workspace dir as safe dir for git (b/c container user != host user)
 git config --global --add safe.directory /workspaces/iris-web
 
+sudo apt update
+sudo apt -y install build-essential libssl-dev libffi-dev python3-dev npm
+
 cd ui/
 sh -c "npm install && NODE_OPTIONS="--inspect" npm run dev -- --host"
 cp -r  /ui/dist /workspaces/iris-web/static
@@ -16,8 +19,7 @@ source .venv/bin/activate
 # change working dir to source 
 cd /workspaces/iris-web/source
 
-sudo apt update
-sudo apt -y install build-essential libssl-dev libffi-dev python3-dev
+
 
 # install python dependencies
 pip install -r requirements.txt
