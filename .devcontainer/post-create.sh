@@ -14,7 +14,7 @@ python3.10 -m venv .venv
 source .venv/bin/activate
 
 # change working dir to source 
-cd /workspaces/iris-websource
+cd /workspaces/iris-web/source
 
 sudo apt update
 sudo apt -y install build-essential libssl-dev libffi-dev python3-dev
