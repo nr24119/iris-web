@@ -5,6 +5,9 @@
 # mark workspace dir as safe dir for git (b/c container user != host user)
 git config --global --add safe.directory /workspaces/iris-web
 
+python3.10 -m venv .venv
+source .venv/bin/activate
+
 # change working dir to source 
 cd source
 
