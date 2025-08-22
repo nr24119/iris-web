@@ -2,8 +2,13 @@
 # after our initial creation of the devcontainer, we will...
 #
 
+
 # mark workspace dir as safe dir for git (b/c container user != host user)
 git config --global --add safe.directory /workspaces/iris-web
+
+cd ui/
+sh -c "npm install && NODE_OPTIONS="--inspect" npm run dev -- --host"
+cp -r  /ui/dist:/workspaces/iris-web/static
 
 python3.10 -m venv .venv
 source .venv/bin/activate
