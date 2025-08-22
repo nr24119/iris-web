@@ -20,6 +20,10 @@ pip install -r requirements.txt
 
 sudo chown -R vscode /home/vscode/iris_data/
 
-#cd ui/
-#sh -c "npm install && NODE_OPTIONS="--inspect" npm run dev -- --host"
-#cp -r  /ui/dist /workspaces/iris-web/static
+nvm install 20
+nvm use 20
+cd /workspaces/iris-web/ui/
+npm ci
+npm run build
+cp -r  dist/* /workspaces/iris-web/source/static
+cp -r /workspaces/iris-web/source/static /workspaces/iris-web/static
