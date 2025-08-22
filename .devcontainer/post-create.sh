@@ -12,7 +12,7 @@ source .venv/bin/activate
 cd source
 
 sudo apt update
-sudo apt install sudo apt-get install build-essential libssl-dev libffi-dev python3-dev
+sudo apt install build-essential libssl-dev libffi-dev python3-dev
 
 # install python dependencies
 pip install -r requirements.txt
