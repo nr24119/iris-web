@@ -14,7 +14,7 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     volumes:
-      - ..:/workspaces/iris-web:cached
+      - ..:/workspaces/iris-web
       - iris_data:/home/vscode/iris_data
     command: sleep infinity
     networks:
@@ -48,11 +48,11 @@ services:
     networks:
       - devcontainer
     environment:
-      POSTGRES_ADMIN_USER:
-      POSTGRES_ADMIN_PASSWORD:
-      POSTGRES_USER:
-      POSTGRES_DB:
-      POSTGRES_PASSWORD:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_ADMIN_USER=raptor
+      - POSTGRES_ADMIN_PASSWORD=admin
+      - POSTGRES_DB=iris_db
 
   # RabbitMQ
   rabbitmq:

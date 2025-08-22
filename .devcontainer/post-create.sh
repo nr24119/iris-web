@@ -10,3 +10,5 @@ cd source
 
 # install python dependencies
 pip install -r requirements.txt
+
+chown -R vscode /home/vscode/iris_data/

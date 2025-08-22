@@ -18,7 +18,6 @@
 	// "remoteUser": "root"
 	// https://containers.dev/implementors/json_reference/#lifecycle-scripts
 	// prep our environment before creating & starting container
-	"initializeCommand": "sh '${localWorkspaceFolder}/.devcontainer/pre-create.sh'",
 	// setup the dev env after the container was setup
 	"postCreateCommand": "sh /workspaces/iris-web/.devcontainer/post-create.sh",
 	"customizations": {
